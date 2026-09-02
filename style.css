@@ -7,37 +7,48 @@
 
 * { box-sizing: border-box; }
 
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
-  background: var(--black);
   color: var(--white);
+  background: linear-gradient(100deg,
+    var(--black) 0 33%,
+    var(--yellow) 33% 66%,
+    var(--red) 66% 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .topbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 28px 16px 22px;
+  gap: 8px;
+  padding: 36px 16px 26px;
   text-align: center;
-  background: linear-gradient(90deg, var(--black) 0 33%, var(--yellow) 33% 66%, var(--red) 66% 100%);
 }
 
 .logo {
-  font-size: clamp(28px, 6vw, 44px);
+  font-size: clamp(30px, 7vw, 50px);
   font-weight: 900;
   letter-spacing: 1px;
-  color: var(--black);
+  color: var(--white);
   text-shadow:
-    -1px -1px 0 var(--white),
-    1px -1px 0 var(--white),
-    -1px 1px 0 var(--white),
-    1px 1px 0 var(--white);
+    -2px -2px 0 var(--black),
+    2px -2px 0 var(--black),
+    -2px 2px 0 var(--black),
+    2px 2px 0 var(--black),
+    0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
 .logo .accent {
-  color: var(--red);
+  color: var(--white);
 }
 
 .tagline {
@@ -45,8 +56,9 @@ body {
   font-weight: 600;
   color: var(--black);
   background: var(--white);
-  padding: 4px 14px;
+  padding: 5px 16px;
   border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 main {
@@ -71,7 +83,11 @@ main {
 
 .cta {
   text-align: center;
-  padding: 28px 16px 40px;
+  padding: 28px 20px 32px;
+  margin: 0 12px 20px;
+  background: rgba(17, 17, 17, 0.82);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
 }
 
 .cta p {
@@ -98,9 +114,8 @@ main {
 
 .site-footer {
   text-align: center;
-  padding: 18px 16px 28px;
-  background: var(--black);
-  border-top: 2px solid var(--yellow);
+  padding: 16px 16px 24px;
+  background: rgba(17, 17, 17, 0.85);
 }
 
 .credit {
